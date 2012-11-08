@@ -37,7 +37,7 @@ module Sudoku
           raise BlankCells, "row #{index} has blank cells"
         end
         if row.uniq.length != 9
-          raise DuplicatesInRow, "row #{index} has duplicates"
+          raise DuplicateInRow, "row #{index} has duplicates"
         end
       end
       matrix.transpose.to_a.each_with_index do |column, index|
